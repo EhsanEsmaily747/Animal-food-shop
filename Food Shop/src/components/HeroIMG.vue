@@ -12,24 +12,25 @@
 
 
 <style scoped>
-    .pic{
-  position: absolute;
-  width: 850px;
-  z-index: -1;
-  right: 0;
-  top: 0;
-}
-.c-out{
-  position: relative;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(-7%,-5%);
-}
-
+  .pic{
+    position: absolute;
+    width: 850px;
+    z-index: -1;
+    right: 0;
+    top: 0;
+  }
+  .c-out{
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-7%,-5%);
+    
+  }
+  
 .c-in{
   aspect-ratio: 1;
   border-radius: 50%;
@@ -43,18 +44,18 @@
   background-image: url(/cat\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  animation: moving 3500ms linear infinite ;
+  animation: moving 3500ms ease-in-out infinite ;
 }
 
 @keyframes moving {
   0%{
-    transform: translate(20px,10px);
+    transform: translate(30px,10px);
   }
   50%{
-    transform: translate(-20px, -10px);
+    transform: translate(-30px, -10px);
   }
   100%{
-    transform: translate(20px, 10px);
+    transform: translate(30px, 10px);
   }
 }
 

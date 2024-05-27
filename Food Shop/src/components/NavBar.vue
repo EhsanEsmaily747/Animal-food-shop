@@ -37,7 +37,7 @@
   }
   .page{
     color: gray;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   nav div:nth-child(2){
@@ -54,7 +54,7 @@
 
   ul li{
     margin-left: 65px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 18px;
     cursor: pointer;
   }
