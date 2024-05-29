@@ -1,8 +1,31 @@
 
 <script setup>
+import { ref } from 'vue';
   import NavBar from './components/NavBar.vue'
   import HeroText from './components/heroText.vue'
   import HeroIMG from './components/HeroIMG.vue'
+
+  const animate =ref(null)
+  let width = 0
+  let flag = true
+  window.onscroll = function(){
+  if (window.scrollY >= 502) {
+    if (flag) {
+      const myInterval = setInterval(() => {
+        animate.value.style.width = `${width}px`
+        width+=85
+        if (width>(850+425)) {
+          console.log('stoped');
+          clearInterval(myInterval)
+        }
+      }, 300);
+      flag = false
+    }
+  }
+}
+
+
+
 </script>
 
 
@@ -26,7 +49,8 @@
     </div>
   
       <div class="main-container">
-        <div class="guy"></div>
+        <div class="steps" ref="animate" ></div>
+        <div class="guy" ></div>
       </div>
   </div>
 
@@ -52,8 +76,19 @@ main div{
   text-align: center;
 }
 
-.main-container{
+  .steps{
+    position: absolute;
+    left: 2rem;
+    height: 140px;
+    margin-inline: auto;
+    width: 0%;
+    background-image: url(/Group\ 15.png);
+    background-repeat: repeat-x;
+  }
 
+
+
+.main-container{
   position: relative;
   display: flex;
   justify-content: center;
@@ -61,11 +96,6 @@ main div{
   height: 550px;
   width: 100%;
   text-align: center;
-  background-image: url(/Group\ 15.png);
-  background-repeat: repeat-x;
-  background-position: center;
-  /* background-size: contain; */
-  animation: steping 1s ease-in;
 }
 .main-container::before{
   content: '';
@@ -94,7 +124,17 @@ main div{
   aspect-ratio: 1;
   background-image: url(Ellipse\ 3.png);
   background-size: contain;
+  animation: anger 800ms ease-in-out infinite;
 }
 
+@keyframes anger {
+  0%{
+    transform: scale(1, 1);
+  }50%{
+    transform: scale(1.01, 1.01);
+  }100%{
+    transform: scale(1, 1);
+  }
+}
 
 </style>
