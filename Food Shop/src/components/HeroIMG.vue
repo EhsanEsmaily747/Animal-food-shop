@@ -39,8 +39,8 @@
 }
 
 .hero-pic{
-  width: 501px;
-  height: 459px;
+  width: 450px;
+  height: 420px;
   background-image: url(/cat\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
