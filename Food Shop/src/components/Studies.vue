@@ -108,7 +108,8 @@ position: relative;
 }
 
 .profile-info div h6{
-  color: rgb(126, 126, 126);
+  color: #838383;
+  font-weight: 600;
 }
 
 </style>

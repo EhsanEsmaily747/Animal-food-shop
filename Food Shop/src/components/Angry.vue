@@ -79,7 +79,7 @@
   aspect-ratio: 1;
   background-image: url(Ellipse\ 3.png);
   background-size: contain;
-  /* animation: anger 800ms ease-in-out infinite; */
+  animation: anger 800ms ease-in-out infinite;
 }
 
 @keyframes anger {
