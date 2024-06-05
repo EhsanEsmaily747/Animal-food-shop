@@ -1,11 +1,7 @@
 <template>
-    <div>
+    <div >
         <div class="pic">
-        <div class="c-out">
-          <div class="c-in">
-            <div class="hero-pic"></div>
-          </div>
-        </div>
+          <div class="hero-pic"></div>    
       </div>
     </div>
 </template>
@@ -13,34 +9,49 @@
 
 <style scoped>
   .pic{
+    height: 100vh;
     position: absolute;
     width: 850px;
     z-index: -1;
+    top: 50vh;
+    transform: translateY(-50vh);
     right: 0;
-    top: 0;
+    
   }
-  .c-out{
-    position: relative;
+  .pic::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
     aspect-ratio: 1;
+    width: 106%;
     border-radius: 50%;
     background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-7%,-5%);
+    transform: translate(-3%,-50%);
     
   }
   
-.c-in{
+.pic::after{
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   aspect-ratio: 1;
   border-radius: 50%;
-  width: 57%;
+  width: 480px;
   background-color: #FFEBC3;
 }
 
 .hero-pic{
-  width: 450px;
-  height: 420px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 500px;
+  height: 450px;
   background-image: url(/cat\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -49,13 +60,13 @@
 
 @keyframes moving {
   0%{
-    transform: translate(30px,10px);
+    transform: translate(-50%,-50%);
   }
   50%{
-    transform: translate(-30px, -10px);
+    transform: translate(-57%, -57%);
   }
   100%{
-    transform: translate(30px, 10px);
+    transform: translate(-50%, -50%);
   }
 }
 
