@@ -28,6 +28,7 @@
 .facts{
   display: flex;
   position: relative;
+  bottom: 1vh;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -59,7 +60,7 @@
 .container{
   display: flex;
   align-items: flex-end;
-  height: 95vh;
+  height: 750px;
   margin-top: 30vh;
   position: relative;
 }
