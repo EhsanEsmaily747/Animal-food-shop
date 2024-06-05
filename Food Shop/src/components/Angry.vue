@@ -77,7 +77,7 @@
   position: relative;
   top: 7vh;
   aspect-ratio: 1;
-  background-image: url(Ellipse\ 3.png);
+  background-image: url(/Ellipse\ 3.png);
   background-size: contain;
   animation: anger 800ms ease-in-out infinite;
 }
