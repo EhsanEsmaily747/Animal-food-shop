@@ -1,5 +1,5 @@
 <template>
-    <div >
+    <div style="position: relative; width: 100%;">
         <div class="pic">
           <div class="hero-pic"></div>    
       </div>
@@ -9,14 +9,12 @@
 
 <style scoped>
   .pic{
-    height: 100vh;
+    /* height: 100vh;   */
     position: absolute;
     width: 850px;
     z-index: -1;
-    top: 50vh;
-    transform: translateY(-50vh);
-    right: 0;
-    
+    right: -10%;
+    top: -3vh;
   }
   .pic::before{
     content: '';
@@ -49,7 +47,7 @@
   position: relative;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,0);
   width: 500px;
   height: 450px;
   background-image: url(/cat\ 1.png);
@@ -60,13 +58,13 @@
 
 @keyframes moving {
   0%{
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,0);
   }
   50%{
-    transform: translate(-57%, -57%);
+    transform: translate(-57%, -7%);
   }
   100%{
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
   }
 }
 
